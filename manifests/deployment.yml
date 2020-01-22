@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: msunvmwaredotnetdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: msunvmwaredotnetdocker 
+    spec:
+      containers:
+        - name: msunvmwaredotnetdocker 
+          image: myregistrys.azurecr.io/msunvmwaredotnetdocker
+          ports:
+          - containerPort: 80
